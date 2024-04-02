@@ -41,10 +41,10 @@ public class RationalNumber
 
 public class ComplexNumber
 {
-    public double Real { get; }
-    public double Imaginary { get; }
+    public int Real { get; }
+    public int Imaginary { get; }
 
-    public ComplexNumber(double real, double imaginary)
+    public ComplexNumber(int real, int imaginary)
     {
         Real = real;
         Imaginary = imaginary;
@@ -52,8 +52,8 @@ public class ComplexNumber
 
     public static ComplexNumber MultiplyByRational(ComplexNumber c, RationalNumber r)
     {
-        double real = c.Real * r.Numerator;
-        double imaginary = c.Imaginary * r.Numerator;
+        int real = c.Real * r.Numerator;
+        int imaginary = c.Imaginary * r.Numerator;
         return new ComplexNumber(real, imaginary);
     }
 }
